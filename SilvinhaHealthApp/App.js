@@ -1,14 +1,14 @@
-import { useSate } from 'react';
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function App() {
-  const [height, setHeight] = useSate(null);
-  const [weight, setWeight] = useSate(null);
-  const [imc, setImc] = useSate(null);
-  const [messageImc, setMessageImc] = useSate("Preencha o peso e a altura");
-  const [textButton, setTextButton] = useSate("Calcular");
+  const [height, setHeight] = useState(null);
+  const [weight, setWeight] = useState(null);
+  const [imc, setImc] = useState(null);
+  const [messageImc, setMessageImc] = useState("Preencha o peso e a altura");
+  const [textButton, setTextButton] = useState("Calcular");
 
   function calcularImc() {
     if (weight != null && height != null){
